@@ -1,6 +1,6 @@
 console.time('total');
 const scan = require('./');
-const safe = require('./vendor/safe-regex');
+const safe = require('./safe-regex');
 
 // console.log(scan('(beep|boop)*'));
 // console.log(safe('(beep|boop)*'));
@@ -34,33 +34,32 @@ console.timeEnd('total');
 // console.log(scan('^[^foo]$').nodes);
 
 function compare(pattern) {
-  // console.log(scan(pattern).starHeight);
   console.log(scan(pattern).height, safe(pattern), pattern);
 }
-// compare('abbb{3,1}');
-// compare('ab{3,1}');
 
-// compare('.*?');
-// compare('a{0,}');
-// compare('a{1,}');
-// compare('a{1,1}');
-// compare('a{1,2}');
-// compare('a{8,}');
-// compare('a{8,100}');
-// compare('a{99}');
-// compare('a{,99}');
-// compare('^foo([^bar]{1,3})*baz$');
-// compare('(?<foo>)');
-// compare('(?<=foo)');
-// compare('(?<!foo)');
-// compare('(?=foo)');
-// compare('(?!foo)');
-// compare('(?:foo)');
-// compare('.*(?:foo)');
-// compare('^[^foo]$');
-// compare('foo/(?<=[^abc])/bar');
-// compare('foo');
-// compare('(foo|bar)');
+// compare('abbb{3,1}'); // should throw an error
+// compare('ab{3,1}'); // should throw an error
+compare('.*?');
+compare('a{0,}');
+compare('a{1,}');
+compare('a{1,1}');
+compare('a{1,2}');
+compare('a{8,}');
+compare('a{8,100}');
+compare('a{99}');
+compare('a{,99}');
+compare('^foo([^bar]{1,3})*baz$');
+compare('(?<foo>)');
+compare('(?<=foo)');
+compare('(?<!foo)');
+compare('(?=foo)');
+compare('(?!foo)');
+compare('(?:foo)');
+compare('.*(?:foo)');
+compare('^[^foo]$');
+compare('foo/(?<=[^abc])/bar');
+compare('foo');
+compare('(foo|bar)');
 
 // // const good = [
 // //   /\bOakland\b/,

@@ -143,9 +143,6 @@ const scan = (input, options = {}) => {
             }
             break;
           case '}':
-            if (options.nobrace !== true) {
-            }
-
             // if (bracket.chars[1] === ',') {
             //   error(`Invalid quantifier: "${inner}"`, bracket, i, true);
             // }

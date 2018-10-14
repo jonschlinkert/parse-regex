@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
+    "ret": "^0.2.2",
     "safe-regex": "^1.1.0"
   },
   "keywords": [
