@@ -1,0 +1,33 @@
+{
+  "name": "parse-regex",
+  "description": "Parse regular expressions into an AST.",
+  "version": "0.1.0-beta",
+  "homepage": "https://github.com/jonschlinkert/parse-regex",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/parse-regex",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/parse-regex/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "safe-regex": "^1.1.0"
+  },
+  "keywords": [
+    "ast",
+    "tokenize",
+    "tokens",
+    "parse",
+    "parse-regex",
+    "parser",
+    "regex",
+    "regular expression"
+  ]
+}
