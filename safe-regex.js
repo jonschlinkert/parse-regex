@@ -1,5 +1,12 @@
 const parse = require('ret');
 
+/**
+ * From substack/safe-regex - this is temporarly copied here to
+ * make testing star-height easier. The safe-regex library
+ * only returns a boolean value, and I need to compare the actual
+ * number calculated.
+ */
+
 module.exports = function(re, opts) {
   if (!opts) opts = {};
   var replimit = opts.limit === undefined ? 25 : opts.limit;
